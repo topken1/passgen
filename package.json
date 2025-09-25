@@ -1,0 +1,16 @@
+{
+  "name": "passgen",
+  "version": "1.0.0",
+  "description": "A Vue.js password generator",
+  "main": "index.html",
+  "scripts": {
+    "dev": "serve -s .",
+    "serve": "serve -s ."
+  },
+  "keywords": ["password", "generator", "vue", "security"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}

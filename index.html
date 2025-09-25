@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>密碼產生器 - Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <h1>🔐 密碼產生器</h1>
+            <p class="subtitle">Password Generator</p>
+            
+            <div class="password-display">
+                <input 
+                    type="text" 
+                    id="passwordInput"
+                    readonly 
+                    class="password-input"
+                    placeholder="點擊「產生密碼」來生成密碼"
+                >
+                <button 
+                    id="copyBtn"
+                    class="copy-btn"
+                    title="複製到剪貼簿"
+                >
+                    📋
+                </button>
+            </div>
+
+            <div class="options">
+                <div class="option-group">
+                    <label id="lengthLabel">密碼長度: 12</label>
+                    <input 
+                        type="range" 
+                        id="lengthSlider"
+                        min="4" 
+                        max="50" 
+                        value="12"
+                        class="length-slider"
+                    >
+                    <div class="length-labels">
+                        <span>4</span>
+                        <span>50</span>
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="uppercase" checked>
+                        <label for="uppercase">大寫字母 (A-Z)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="lowercase" checked>
+                        <label for="lowercase">小寫字母 (a-z)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="numbers" checked>
+                        <label for="numbers">數字 (0-9)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="symbols">
+                        <label for="symbols">特殊符號 (!@#$%^&*)</label>
+                    </div>
+                </div>
+
+                <div class="strength-indicator">
+                    <span>密碼強度: </span>
+                    <span id="strengthIndicator" class="strength">-</span>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button 
+                    id="generateBtn"
+                    class="generate-btn"
+                >
+                    🎲 產生密碼
+                </button>
+                <button 
+                    id="clearBtn"
+                    class="clear-btn"
+                >
+                    🗑️ 清除
+                </button>
+            </div>
+
+            <div id="warningInfo" class="info" style="display: none;">
+                <p>⚠️ 請至少選擇一種字元類型</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
